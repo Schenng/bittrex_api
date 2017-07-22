@@ -5,7 +5,7 @@ $( document ).ready(function() {
 });
 
 function reloadBittrex() {
-  $.get( "http://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarketsummaries",
+  $.get( "https://bittrex.com/api/v1.1/public/getmarketsummaries",
     function( data ) {
 
       var data = data.result

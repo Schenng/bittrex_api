@@ -5,7 +5,7 @@ $( document ).ready(function() {
 });
 
 function reloadBittrex() {
-  $.get( "https://bittrex.com/api/v1.1/public/getmarketsummaries",
+  $.get( "http://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarketsummaries",
     function( data ) {
 
       var data = data.result
@@ -13,14 +13,14 @@ function reloadBittrex() {
       var body = $('#bittrexTable'),
 
       props = [
+        "MarketName",
+        "Last",
         "Ask",
         "BaseVolume",
         "Bid",
         "Created",
         "High",
-        "Last",
         "Low",
-        "MarketName",
         "OpenBuyOrders",
         "OpenSellOrders",
         "PrevDay",
